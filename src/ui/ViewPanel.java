@@ -46,28 +46,6 @@ public class ViewPanel extends javax.swing.JPanel {
         NameLabel = new javax.swing.JLabel();
         ageLabelName = new javax.swing.JLabel();
 
-        ageTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ageTextFieldActionPerformed(evt);
-            }
-        });
-        ageTextField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                ageTextFieldKeyPressed(evt);
-            }
-        });
-
-        nameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameTextFieldActionPerformed(evt);
-            }
-        });
-        nameTextField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                nameTextFieldKeyReleased(evt);
-            }
-        });
-
         titleLabel.setBackground(new java.awt.Color(0, 102, 204));
         titleLabel.setFont(new java.awt.Font("Kailasa", 1, 24)); // NOI18N
         titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -190,22 +168,6 @@ public class ViewPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ageTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageTextFieldActionPerformed
-
-    private void ageTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ageTextFieldKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageTextFieldKeyPressed
-
-    private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextFieldActionPerformed
-
-    private void nameTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameTextFieldKeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTextFieldKeyReleased
-
     private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         Patient newPatient = new Patient();
@@ -232,7 +194,6 @@ public class ViewPanel extends javax.swing.JPanel {
         selectedPatient = patients.get(selectedIndex);
         nameTextField.setText(selectedPatient.getName());
         ageTextField.setText(Integer.toString(selectedPatient.getAge()));
-
     }//GEN-LAST:event_updateButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
@@ -270,7 +231,6 @@ public class ViewPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this,e.getMessage());
             }
     }
-    
 
     private void clearFields() {
         nameTextField.setText("");
